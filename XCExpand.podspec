@@ -70,9 +70,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes/XcExpand.h"
+  s.source_files  = "Classes/*.h"
   s.exclude_files = "Classes/Exclude"
-  s.public_header_files = "Classes/XcExpand.h"
+  s.public_header_files = "Classes/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -113,26 +113,26 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-    s.subspec 'Category' do |ss|
-        ss.public_header_files = "Classes/Category/*.h"
-        ss.source_files = 'Classes/Category'
-    end
+   # s.subspec 'Define' do |ss|
+        #ss.public_header_files = 'Classes/Define/XcDefine.h'
+       # ss.source_files = 'Classes/Define/**/*'
+   # end
 
-    s.subspec 'Define' do |ss|
-        ss.public_header_files = "Classes/Define/XcDefine.h"
-        ss.source_files = 'Classes/Define/XcDefine.h'
-    end
+    #s.subspec 'PickerView' do |ss|
+     #   ss.dependency 'XCExpand/Define'
+     #   ss.public_header_files = 'Classes/PickerView/*.h'
+      #  ss.source_files = 'Classes/PickerView/**/*'
+    #end
 
-    s.subspec 'PickerView' do |ss|
-        ss.dependency 'XCExpand/Define'
-        ss.public_header_files = "Classes/PickerView/*.h"
-        ss.source_files = 'Classes/PickerView'
-    end
+    #s.subspec 'XCTableView' do |ss|
+    #    ss.dependency 'XCExpand/Define'
+    #    ss.public_header_files = 'Classes/XCTableView/XCTableView.h'
+    #    ss.source_files = 'Classes/XCTableView/**/*'
+    #end
 
-    s.subspec 'XCTableView' do |ss|
-        ss.dependency 'XCExpand/Define'
-        ss.public_header_files = "Classes/XCTableView/XCTableView.h"
-        ss.source_files = 'Classes/XCTableView'
-    end
+    #s.subspec 'Category' do |ss|
+     #   ss.public_header_files = 'Classes/Category/*.h'
+     #   ss.source_files = 'Classes/Category/**/*'
+    #end
 
 end
