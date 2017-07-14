@@ -119,13 +119,12 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Define' do |ss|
-        ss.dependency 'AFNetworking/NSURLSession'
         ss.public_header_files = "Classes/Define/*.h"
         ss.source_files = 'Classes/Define'
     end
 
     s.subspec 'PickerView' do |ss|
-        ss.dependency 'AFNetworking/Define'
+        ss.dependency 'XCExpand/Define'
         ss.public_header_files = "Classes/PickerView/*.h"
         ss.source_files = 'Classes/PickerView'
     end
