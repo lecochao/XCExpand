@@ -7,43 +7,21 @@
 #
 
 Pod::Spec.new do |s|
-
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   s.name         = "XCExpand"
   s.version      = "0.0.2"
   s.summary      = "A simple class library to share."
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
                     *A simple class library to share.
                     *Common macro and some extension and encapsulation.
                    DESC
-
   s.homepage     = "https://github.com/lecochao/XCExpand"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
-
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
   #  Licensing your code is important. See http://choosealicense.com for more info.
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
-
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Specify the authors of the library, with email addresses. Email addresses
@@ -134,5 +112,28 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+
+    s.subspec 'Category' do |ss|
+        ss.public_header_files = "Classes/Category/*.h"
+        ss.source_files = 'Classes/Category'
+    end
+
+    s.subspec 'Define' do |ss|
+        ss.dependency 'AFNetworking/NSURLSession'
+        ss.public_header_files = "Classes/Define/*.h"
+        ss.source_files = 'Classes/Define'
+    end
+
+    s.subspec 'PickerView' do |ss|
+        ss.dependency 'AFNetworking/Define'
+        ss.public_header_files = "Classes/PickerView/*.h"
+        ss.source_files = 'Classes/PickerView'
+    end
+
+    s.subspec 'XCTableView' do |ss|
+        ss.dependency 'XCExpand/Define'
+        ss.public_header_files = "Classes/XCTableView/*.h"
+        ss.source_files = 'Classes/XCTableView'
+    end
 
 end
