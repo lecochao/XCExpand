@@ -59,7 +59,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/lecochao/XCExpand.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/lecochao/XCExpand.git", :tag => "#{s.version}" ,:submodules => true}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -70,7 +70,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes"
+  s.source_files  = "Classes/XcExpand.h"
   s.exclude_files = "Classes/Exclude"
   s.public_header_files = "Classes/XcExpand.h"
 
@@ -119,8 +119,8 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Define' do |ss|
-        ss.public_header_files = "Classes/Define/*.h"
-        ss.source_files = 'Classes/Define'
+        ss.public_header_files = "Classes/Define/XcDefine.h"
+        ss.source_files = 'Classes/Define/XcDefine.h'
     end
 
     s.subspec 'PickerView' do |ss|
@@ -131,7 +131,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'XCTableView' do |ss|
         ss.dependency 'XCExpand/Define'
-        ss.public_header_files = "Classes/XCTableView/*.h"
+        ss.public_header_files = "Classes/XCTableView/XCTableView.h"
         ss.source_files = 'Classes/XCTableView'
     end
 
