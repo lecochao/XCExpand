@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "XCExpand"
   s.version      = "0.0.1"
-  s.summary      = "A short description of xc."
+  s.summary      = "A simple class library to share."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-
-    Common macro and some extension and encapsulation.
+                    *A simple class library to share.
+                    *Common macro and some extension and encapsulation.
                    DESC
 
-  s.homepage     = "https://github.com/chaoLeco/XCExpand"
+  s.homepage     = "https://github.com/lecochao/XCExpand"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -54,10 +54,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "" => "" }
-  # Or just: s.author    = ""
-  # s.authors            = { "" => "" }
-  # s.social_media_url   = "http://twitter.com/"
+  s.author             = { "chao'L" => "475911599@qq.com" }
+  # Or just: s.author    = "chao'L"
+  # s.authors            = { "chao'L" => "475911599@qq.com" }
+  # s.social_media_url   = "http://twitter.com/chao'L"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/lecochao/XCExpand", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/lecochao/XCExpand.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
